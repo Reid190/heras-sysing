@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+/* Header */
+header {
+    background: #dbdfac;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /* Stack items vertically for mobile */
+    align-items: center;
+    border-bottom: 3px solid #3b1f2b;
+    position: relative;
+}
+
+/* Container inside the header */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically for mobile */
+    align-items: center;
+    gap: 1rem; /* Space between logo and navigation */
+}
+
+/* Logo styling */
+.logo img {
+    height: 50px; /* Reduce size for mobile */
+}
+
+/* Navigation styling */
+nav {
+    margin-top: 1rem; /* Space between logo and nav */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    padding: 0;
+    margin: 0;
+    align-items: center; /* Center items horizontally */
+}
+
+nav ul li {
+    margin: 0.5rem 0; /* Space between nav items */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: row; /* Stack items horizontally on larger screens */
+    }
+
+    /* Container inside the header */
+    .container {
+        flex-direction: row; /* Align items horizontally on larger screens */
+        justify-content: space-between; /* Space between logo and nav */
+        align-items: center;
+    }
+
+    /* Navigation styling */
+    nav {
+        margin-top: 0; /* Remove top margin on larger screens */
+    }
+
+    nav ul {
+        flex-direction: row; /* Align nav items horizontally on larger screens */
+        gap: 1.5rem; /* Space between nav items */
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0; /* Remove vertical margin between nav items */
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('1231231.jpg') no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 1rem;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.cta-button:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Sections */
+section {
+    padding: 4rem 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* About Section */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem; /* Adds space between the text and image */
+}
+
+#about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem; /* Adds space between the text and image */
+}
+
+#about .about-text {
+    max-width: 800px;
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    #about .container {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 2rem; /* Space between text and image on larger screens */
+    }
+    
+    .about-text {
+        flex: 1;
+    }
+
+    .about-img {
+        max-width: 50%;
+    }
+}
+
+#services {
+    padding: 4rem 1rem;
+    background-color: #dbdfac; /* Background color for better contrast */
+}
+
+#services .container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    gap: 2rem; /* Space between service items */
+}
+
+.service {
+    background: #fff; /* Background color for each service item */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out content */
+    flex: 1; /* Allow items to grow and shrink as needed */
+    min-height: 300px; /* Minimum height for uniformity */
+    box-sizing: border-box; /* Ensure padding and border are included in the height */
+}
+
+/* Ensure the image does not affect the height consistency */
+.service img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem; /* Adds space below the image */
+}
+
+/* Style for headings */
+.service h3 {
+    margin-bottom: 1rem; /* Adds space below the heading */
+    font-size: 1.5rem; /* Adjust font size for better readability */
+}
+
+/* Style for paragraphs */
+.service p {
+    margin: 0 0 1rem 0; /* Space below the paragraph */
+    text-align: left; /* Align paragraph text to the left */
+}
+
+/* Style for list */
+.service ul {
+    list-style-type: disc; /* Retain the bullet points */
+    padding-left: 1.5rem; /* Add padding to the left of the list */
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6; /* Improved line height for readability */
+    text-align: left; /* Align list items to the left */
+}
+
+/* Style for list items */
+.service ul li {
+    margin-bottom: 0.5rem; /* Space between list items */
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    #services .container {
+        display: grid; /* Grid layout for larger screens */
+        grid-template-columns: repeat(3, 1fr); /* Maintain three columns on larger screens */
+    }
+
+    .service {
+        text-align: center; /* Center-align text on larger screens */
+    }
+
+    .service ul, .service p {
+        text-align: left; /* Align text to the left for better readability */
+    }
+}
+
+/* Market Analysis Section */
+#market-analysis {
+    padding: 4rem 1rem;
+    background-color: #f5f5dc; /* Light background for readability */
+}
+
+#market-analysis .container {
+    max-width: 1200px; /* Limits the width of the container */
+    margin: 0 auto;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem; /* Space between title and content */
+}
+
+.section-title h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Target Market Section */
+.section-target-market {
+    margin-bottom: 4rem;
+}
+
+.section-target-market h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.analysis-items.target-market {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns per row */
+    gap: 2rem;
+}
+
+.analysis-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.analysis-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.analysis-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.analysis-content h4 {
+    margin-top: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .analysis-items.target-market {
+        grid-template-columns: repeat(2, 1fr); /* Two columns per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .analysis-items.target-market {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+}
+
+/* Competitors Section */
+.section-competitors {
+    margin-bottom: 4rem;
+    padding-left: 10%;
+}
+
+.section-competitors h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.analysis-items.competitors {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns per row */
+    gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .analysis-items.competitors {
+        grid-template-columns: repeat(2, 1fr); /* Two columns per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .analysis-items.competitors {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+}
+
+/* Competitors Section */
+.section-competitors {
+    margin-bottom: 4rem;
+}
+
+.section-competitors h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.analysis-items.competitors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid columns */
+    gap: 2rem;
+}
+
+.analysis-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.analysis-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.analysis-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.analysis-content h4 {
+    margin-top: 0;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 767px) {
+    .analysis-items.competitors {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+}
+
+
+/* Contact Form */
+form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #333;
+}
+
+/* Footer */
+footer {
+    background: #dbdfac;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-media li {
+    margin: 0;
+}
+
+.social-media li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.social-media li a:hover {
+    text-decoration: underline;
+}
